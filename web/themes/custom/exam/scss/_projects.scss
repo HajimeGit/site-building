@@ -1,0 +1,189 @@
+
+
+// styles for projects //
+
+.block-views-blockprojects-block-1{
+
+  // projects title //
+
+  .block-title{
+    @include view_title;
+    font-weight: 500;
+    margin-bottom: 25px;
+  }
+
+  // linear background //
+
+  .background-view{
+    @include background_gradient;
+  }
+
+  // view styles //
+
+  .view-content{
+    justify-content: space-between;
+    display: flex;
+
+    // media for content //
+    @media (max-width: 1250px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+  // view row //
+
+    .views-row{
+      background: white;
+      border-bottom: 2px solid black;
+
+      // media for row //
+      @media (max-width: 1250px) {
+        max-width: 290px;
+      }
+      @media (max-width: 630px) {
+        flex-basis: 100%;
+        margin: 20px 0;
+      }
+    }
+    .views-row-container{
+      // media for container  //
+      @media (max-width: 1250px) {
+        flex-basis: 50%;
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+      }
+      @media (max-width: 630px) {
+        flex-basis: 100%;
+        margin: 20px 0;
+      }
+
+    }
+
+  // view row content //
+
+    .content{
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+  // project title //
+
+    .views-field-field-project-title{
+      text-align: center;
+      text-transform: uppercase;
+      color: #373645;
+      font-size: 24px;
+      padding-top: 30px;
+      padding-bottom: 5px;
+    }
+
+  // project taxonomy //
+
+    .views-field-field-project-taxonomy{
+      text-align: center;
+      .field-content{
+        & > a{
+          font-size: 16px;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+
+    // project buttons //
+
+    .views-field-view-node{
+      text-align: center;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      .field-content{
+        & > a{
+          &:hover{
+            text-decoration: none;
+            opacity: 0.8;
+          }
+          text-transform: uppercase;
+          color: white;
+          padding: 7px 10px;
+          background: #373645;
+        }
+      }
+    }
+  }
+}
+
+
+//styles for projects (for href attributes)//
+
+a[href*="/web-development"],a[href*="/php-development"],a[href*="/app-development"],a[href*="/drupal-project"]{
+  &:hover{
+    text-decoration: none;
+  }
+}
+  a[href*="/web-development"]{
+    color: #1bbc9b;
+  }
+  a[href*="/php-development"]{
+    color: #e84c3d;
+  }
+  a[href*="/app-development"]{
+    color: #9d5bb6;
+  }
+  a[href*="/drupal-project"]{
+    color: #3cb1e3;
+  }
+
+//styles for pager//
+
+
+  .pager-nav{
+    ul{
+      margin: 50px 0 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      // media for pager //
+      @media(max-width: 630px){
+        margin: 50px 0 70px;
+      }
+
+      li{
+        background-color: transparent;
+        & > a{
+          background-color: transparent;
+          border: none;
+          color: #656565;
+            span{
+              border: none;
+            }
+            &:hover{
+              background-color: transparent;
+              color: #656565;
+            }
+        }
+      }
+
+      // styles if item is active //
+
+      .is-active{
+        a{
+          border-color: transparent;
+          background-color: #dddcdd;
+          color: #656565;
+          padding: 4px 10px;
+          border-radius: 50%;
+            &:hover,&:focus{
+              outline: none;
+              border: none;
+              background-color: #dddcdd;
+              opacity: 0.8;
+              color: #656565;
+              cursor: pointer;
+            }
+        }
+      }
+    }
+  }

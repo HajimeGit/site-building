@@ -1,0 +1,120 @@
+
+
+// styles for services //
+
+.block-views-blockservices-block-1{
+
+  // title for view //
+
+   .block-title{
+     @include view_title;
+   }
+
+  // view content //
+
+    .view-content{
+      justify-content: space-between;
+      display: flex;
+      margin-top: 100px;
+      margin-bottom: 110px;
+
+      // media for content //
+      @media (max-width: 992px){
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      @media (max-width: 500px){
+        margin-top: 50px;
+        margin-bottom: 60px;
+      }
+    }
+
+  // view row //
+
+    .views-row-container{
+      @media (max-width: 992px){
+        flex-basis: 50%;
+        padding-bottom: 30px;
+      }
+      @media (max-width: 600px){
+        flex-basis: 100%;
+      }
+
+
+      // flex for every item //
+    }
+  .views-row{
+
+    // media for row //
+
+
+
+    // service image //
+
+    .field--name-field-services-image{
+      margin-bottom: 40px;
+    }
+
+    // service title //
+
+    .field--name-field-services-title {
+      text-align: center;
+      text-transform: uppercase;
+      color: #373645;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    // service title //
+
+    .content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      // media for content //
+      @media (max-width: 500px){
+        border-bottom: 1px solid lightgray;
+        padding-bottom: 20px;
+      }
+    }
+    article[data-history-node-id="4"]{
+      .content{
+        border: none;
+      }
+    }
+
+    // text for service //
+
+    .field--type-text-with-summary{
+      > p{
+        max-width: 296px;
+        text-align: center;
+        color: #cccccc;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: -0.8px;
+        margin-top: 15px;
+        margin-bottom: 30px;
+
+        // media for small text //
+        @media (max-width: 1200px) {
+          max-width: 210px;
+        }
+      }
+    }
+
+    // services buttons //
+
+    .node-readmore{
+      & > a {
+        @include blue_button;
+        &:hover {
+          text-decoration: none;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+

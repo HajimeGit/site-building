@@ -1,0 +1,101 @@
+
+// styles for about block //
+
+#block-aboutline{
+  .about_line {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    border-bottom: 4px solid #6e9bca;
+    display: flex;
+    border-top: 4px solid black;
+    align-items: center;
+
+    // media for all about-line block //
+
+    @media (max-width: 768px) {
+      margin: 50px 15px;
+      padding: 10px;
+    }
+
+    @media (max-width: 600px) {
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    & > h2 {
+      font-size: 26px;
+      color: #373645;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin: 13px 0;
+    }
+  }
+
+// about-line gray text //
+
+  .field--type-text-with-summary{
+    margin-left: 20px;
+
+    // media for all text block //
+    @media (max-width: 600px) {
+      margin-left: 0;
+      padding-bottom: 20px;
+    }
+
+
+    & > p{
+      color: #cccccc;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: 17px;
+      margin: 0 auto;
+
+      // media for p //
+
+      @media (max-width: 1200px) {
+        font-size:13px ;
+      }
+      @media (max-width: 600px) {
+        max-width: 350px;
+
+      }
+    }
+  }
+
+// about button //
+
+  .field--name-field-about-link{
+    min-width: 120px;
+    margin-left: auto;
+
+    // media for button //
+    @media (max-width: 650px) {
+      min-width: 100px;
+    }
+    @media (max-width: 600px) {
+      margin-left: unset;
+    }
+
+    & > a{
+      &:hover{
+        text-decoration: none;
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(85,169,209,1) 0%, rgba(61,122,240,1) 100%);
+      }
+      color: white;
+      text-transform: uppercase;
+      display: block;
+      width: 100%;
+      line-height: 30px;
+      height: 100%;
+      padding: 0 7px;
+      background-color: #6e9bca;
+
+      // media for a in button //
+      @media (max-width: 650px) {
+        font-size: 11px;
+      }
+
+    }
+  }
+}

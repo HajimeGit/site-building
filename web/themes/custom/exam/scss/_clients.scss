@@ -1,0 +1,42 @@
+
+// slider styles//
+
+.block-views-blockclients-block-1{
+  padding-bottom: 150px;
+
+
+  // media for slider padding //
+
+  @media (max-width: 992px) {
+    padding-bottom: 50px;
+  }
+
+  // slider title //
+
+  .block-title{
+    @include view_title;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+
+  // slider image center //
+
+  .views-field-field-slider-image{
+    img{
+      margin: 0 auto;
+      height: 107px;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+  .field-content{
+    img{
+      margin: 0 auto;
+      height: 107px;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+}
+

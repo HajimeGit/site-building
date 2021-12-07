@@ -1,0 +1,158 @@
+
+// teams styles //
+
+.block-views-blockteam-block-1{
+
+  // team title //
+
+  .block-title{
+    @include view_title;
+    margin-top: 100px;
+    margin-bottom: 40px;
+  }
+
+  // team content //
+
+  .view-content{
+    margin-bottom: 195px;
+    display: flex;
+    justify-content: space-between;
+
+    // media for content //
+    @media (max-width: 1250px) {
+      flex-wrap: wrap;
+
+    }
+    @media (max-width: 992px) {
+      margin-bottom: 100px;
+
+    }
+  }
+
+  // team row //
+
+  // container row //
+  .views-row-container{
+
+    // media for container row //
+    @media (max-width: 1250px) {
+      flex-basis: 50%;
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
+    @media (max-width: 630px) {
+      flex-basis: 100%;
+      margin: 20px 0;
+    }
+  }
+
+  .views-row{
+
+    // media for row //
+    @media (max-width: 1250px){
+      max-width: 290px;
+    }
+    @media (max-width: 630px) {
+      box-shadow:2px 3px 11px 0px rgba(50, 50, 50, 0.75);
+      padding-bottom: 15px;
+    }
+
+    // team img //
+
+    img{
+
+      // b&w filters //
+
+      transition: filter 0.5s;
+      filter: grayscale(100%);
+      @media (max-width: 630px) {
+        filter: grayscale(0);
+      }
+    }
+
+    // on hover //
+
+    &:hover{
+      img{
+        filter: grayscale(0);
+      }
+    }
+    text-align: center;
+  }
+
+  // team name //
+
+  .views-field-name{
+    text-transform: uppercase;
+    color: #373645;
+    font-size: 22px;
+    margin-top: 20px;
+    a{
+      color: #373645;
+      text-decoration: none;
+    }
+  }
+
+  // team posititon //
+
+  .views-field-field-user-position{
+    color: #cccccc;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 12px;
+    a{
+      color: #cccccc;
+      text-decoration: none;
+    }
+  }
+
+  // team user //
+
+  .views-field-view-user{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    a{
+      &:hover{
+        opacity: 0.8;
+      }
+      text-transform: uppercase;
+      font-size: 14px;
+      background-color: #373645;
+      color: white;
+      text-decoration: none;
+      padding: 6px 10px;
+    }
+  }
+
+  // team buttons //
+
+  .views-field-field-user-link{
+    display: inline-block;
+    margin-right: 100px;
+    font-size: 20px;
+  }
+
+
+  // team flags(heart) //
+
+  .views-field-link-flag{
+    position: absolute;
+    display: inline-block;
+    a{
+      color: #c8c8c8;
+      text-decoration: none;
+    }
+  }
+}
+
+
+
+// flag padding on-click reset //
+
+.js-flag-message,.ajax-throbber{
+  display: none;
+}
+.svg-inline--fa{
+  margin-right: 2px;
+}

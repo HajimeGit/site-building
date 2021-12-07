@@ -1,0 +1,337 @@
+
+// news block //
+
+.block-views-blocknews-block-1{
+
+  // title //
+
+  .block-title{
+    @include view_title;
+    margin-bottom: 30px;
+  }
+  .form-group{
+    margin-bottom: 75px;
+  }
+
+  // background gradient //
+
+
+  .background-view{
+    @include background_gradient;
+  }
+
+  // content //
+
+  .view-content{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+
+    // media for content //
+    @media (max-width: 1250px){
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  // row container //
+
+  .views-row-container{
+
+    // media for row container //
+    @media (max-width: 1250px) {
+      display: flex;
+      margin: 20px 0;
+      justify-content: center;
+    }
+
+  }
+
+  // row //
+
+  .views-row{
+    max-width: 610px;
+    background-color: #ffffff;
+
+    // media for row //
+    @media (max-width: 992px) {
+      box-shadow: 2px 3px 7px 0px rgb(50 50 50 / 75%)
+    }
+
+  }
+
+  // upper content //
+
+  .news-upper {
+    display: flex;
+    align-items: center;
+
+
+    // media for news-upper //
+    @media (max-width: 630px) {
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+
+  // first fieldset //
+
+  .views-field-fieldset{
+    padding-top: 20px;
+  }
+
+  // news date //
+  .views-field-created-2{
+    text-align: center;
+    padding: 0 20px;
+
+    // media for news date //
+    @media (max-width: 630px) {
+      order: 1;
+      flex-basis: 25%;
+    }
+
+    span{
+      p{
+        // months //
+        &:first-child{
+          font-size: 24px;
+          text-transform: uppercase;
+          margin: 0;
+        }
+        // days //
+        &:nth-child(2){
+          color: #6e9bca;
+          font-size: 42px;
+          margin: 0;
+          font-weight: 700;
+          line-height: 25px;
+        }
+        // years //
+        &:last-child{
+          color: #cccccc;
+          margin: 5px 0 0 0;
+        }
+      }
+    }
+  }
+
+  // users picture //
+
+  .views-field-user-picture{
+    border-left: 1px solid lightgrey;
+    padding-left: 20px;
+
+    // media for user picture  //
+    @media (max-width: 630px) {
+      flex-basis: 25%;
+      display: flex;
+      justify-content: left;
+      order: 2;
+    }
+    @media (max-width: 500px) {
+      flex-basis: 33%;
+      justify-content: center;
+      border-left: none;
+      padding-left: 10px;
+    }
+
+  }
+
+  // user name //
+
+  .views-field-name{
+    letter-spacing: -0.5px;
+    line-height: 1;
+    align-self: self-start;
+
+    // media for user name //
+    @media (max-width: 630px) {
+      order: 3;
+      flex-basis: 25%;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+    }
+    @media (max-width: 500px) {
+      flex-basis: 33%;
+      justify-content: start;
+    }
+
+    span{
+      font-size: 12px;
+      padding-left: 10px;
+      margin-right: 3px;
+      color: #cccccc;
+      text-transform: uppercase;
+
+      // media for span //
+      @media (max-width: 630px) {
+        word-break: break-word;
+        text-align: left;
+        max-width: 140px;
+      }
+
+      a{
+        &:first-child{
+          color: #373645;
+          text-decoration: none;
+        }
+        &:last-child{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  // date for age //
+
+  .views-field-created{
+    font-size: 12px;
+    padding-right: 20px;
+    align-self: flex-start;
+    margin-left: auto;
+    text-transform: uppercase;
+    color: #cccccc;
+
+    // media for taxonomy //
+    @media (max-width: 630px) {
+      order: 4;
+      align-self: center;
+      flex-basis: 25%;
+      display: flex;
+      justify-content: center;
+      padding-right: unset;
+    }
+    @media (max-width: 500px) {
+      justify-content: flex-start;
+      flex-basis: 100%;
+      display: flex;
+      padding-left: 4%;
+    }
+  }
+
+  // second fieldset //
+
+
+  .views-field-fieldset-1{
+    padding: 15px 20px 20px 90px;
+
+    // media for second fieldset //
+    @media (max-width: 630px) {
+      padding: 15px 20px 20px 20px;
+    }
+  }
+
+  // bottom part for news //
+
+  .news-bottom{
+    padding-left: 20px;
+    border-left: 1px solid lightgrey;
+    display: flex;
+    flex-direction: column;
+
+    // media for second fieldset //
+    @media (max-width: 630px) {
+      text-align: center;
+      padding-left: unset;
+      border-left: none;
+    }
+
+  }
+
+  // title of news //
+
+  .views-field-title{
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-bottom: 5px;
+    // media for title //
+
+    @media (max-width: 630px) {
+      font-size: 20px;
+    }
+    span{
+      a {
+        color: #373645;
+        text-decoration: none;
+      }
+    }
+  }
+
+  // text of news //
+
+  .views-field-body{
+    text-transform: uppercase;
+    color: #2c2c2c;
+    letter-spacing: -1.5px;
+    line-height: 15px;
+    max-width: 478px;
+    margin: 0 auto;
+
+    // media for text //
+    @media (max-width: 630px) {
+      font-size: 13px;
+    }
+
+    p{
+      text-align: justify;
+      margin: 0;
+    }
+  }
+
+  // styles for news button //
+
+  .views-field-view-node{
+    align-self: flex-end;
+    margin-top: 15px;
+
+    // media for news button //
+    @media (max-width: 630px) {
+      align-self: center;
+      margin-top: 30px;
+    }
+
+
+    a{
+      &:hover{
+        opacity: 0.8;
+      }
+      text-transform: uppercase;
+      font-size: 14px;
+      background-color: #373645;
+      color: white;
+      text-decoration: none;
+      padding: 6px 10px;
+    }
+  }
+
+  // news search //
+
+  .view-filters{
+    margin-bottom: 15px;
+
+    // media for search body //
+    @media (max-width: 1250px){
+      display: flex;
+      justify-content: center;
+    }
+    .form-group{
+      @media (max-width: 768px){
+        margin-right: 20px;
+      }
+    }
+    .form--inline{
+      margin-top: 15px;
+      max-height: 35px;
+
+      // media for search input body 2 //
+      @media (max-width: 768px){
+        display: flex;
+        justify-content: space-between;
+      }
+
+    }
+  }
+}
+
