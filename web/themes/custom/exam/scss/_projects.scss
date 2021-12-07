@@ -159,7 +159,7 @@ a[href*="/web-development"],a[href*="/php-development"],a[href*="/app-developmen
             span{
               border: none;
             }
-            &:hover{
+            &:hover,&:focus{
               background-color: transparent;
               color: #656565;
             }

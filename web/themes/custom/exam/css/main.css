@@ -758,7 +758,7 @@ a[href*="/drupal-project"] {
 .pager-nav ul li > a span {
   border: none;
 }
-.pager-nav ul li > a:hover {
+.pager-nav ul li > a:hover, .pager-nav ul li > a:focus {
   background-color: transparent;
   color: #656565;
 }
